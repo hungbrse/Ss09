@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+let inputNumber = prompt("Nhập một số:");
+// biến rỗng chứa kết quả
+let result = "";
+// trong js thì chuỗi có thể sét như mảng vì vậy inputNumber.length hợp lệ.
+for (let i = 0; i < inputNumber.length; i++) {
+    let currentDigit = parseInt(inputNumber[i]);
+ // gán số vô biến.
+    result += currentDigit;
+// inputNumber[i+1] tức là lấy phần tử sau phần tử hiện tại.
+// ví dụ [2,4,6,8] input[i] =2; thì input[i+1] = 4;
+
+    if (currentDigit % 2 === 0 && inputNumber[i + 1] ) {
+        result += "-";
+    }
+}
+
+console.log("Kết quả: " + result);
+
+
+	</script>
+</body>
+</html>
